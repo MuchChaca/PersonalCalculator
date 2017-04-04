@@ -24,6 +24,11 @@
             android:textStyle="bold"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/imc_calc_tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
