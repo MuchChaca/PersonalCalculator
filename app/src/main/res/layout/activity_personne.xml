@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_personne"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="chacas0.personnalcalculator.ActivityPersonne">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Création d'une personne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/personne_tv_titre"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lay_identite"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/lay_identite_h">
+
+                <EditText
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/te_name"
+                    android:hint="Name" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/te_firstname"
+                    android:layout_weight="1"
+                    android:hint="First name" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/lay_sexe">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_rg_sexe">
+
+                <TextView
+                    android:text="Your sexe"
+                    android:layout_width="118dp"
+                    android:layout_height="33dp"
+                    android:id="@+id/tv_sexe"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <RadioGroup
+                    android:layout_width="209dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rg_sexe"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:text="Female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_f"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="normal|bold"
+                        android:button="@android:drawable/btn_radio"
+                        app:buttonTint="@color/colorPrimaryDark" />
+
+                    <RadioButton
+                        android:text="Male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_male"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp"
+                        android:button="@android:drawable/btn_radio"
+                        app:buttonTint="@color/colorPrimaryDark" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lay_age"
+            android:layout_below="@+id/lay_sexe"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_age_hor">
+
+                <TextView
+                    android:text="Your age"
+                    android:layout_width="105dp"
+                    android:layout_height="34dp"
+                    android:id="@+id/tv_age"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/et_age"
+                    android:hint="Age"
+                    android:textStyle="normal|italic"
+                    android:textColor="?attr/colorPrimary"
+                    android:textAlignment="textStart"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_age"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="11dp"
+            android:id="@+id/lay_taille"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Your height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_taille"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_weight="0.05" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
+                android:id="@+id/lay_taille_hor">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/et_taille"
+                    android:textStyle="normal|italic"
+                    android:hint="(taille en cm)"
+                    android:textColor="?attr/colorPrimary"
+                    android:textAlignment="center"
+                    android:layout_weight="1" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/rg_taille"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:text="m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_m"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:text="cm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_cm"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@color/colorPrimaryDark" />
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_taille"
+            android:layout_alignParentStart="true"
+            android:id="@+id/lay_poids">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lay_poids_hor">
+
+                <TextView
+                    android:text="Your weight (kg)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_poids"
+                    android:textStyle="normal|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="204dp"
+                    android:layout_height="54dp"
+                    android:inputType="number|numberDecimal"
+                    android:ems="10"
+                    android:id="@+id/et_poids"
+                    android:hint="(kg)"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="normal|italic"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:text="Create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_create"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

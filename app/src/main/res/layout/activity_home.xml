@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="chacas0.personnalcalculator.Home">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lay_home">
+
+        <TextView
+            android:text="Welcome to the personnal calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_tv_titre"
+            android:textColor="@android:color/holo_green_dark"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:text="Créer une personne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_btn_personne"
+            android:textStyle="normal|bold"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:text="Calculer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_btn_calculer"
+            android:layout_marginTop="10dp"
+            android:textStyle="normal|bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>
