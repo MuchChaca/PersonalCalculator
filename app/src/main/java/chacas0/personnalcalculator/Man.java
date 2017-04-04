@@ -6,7 +6,7 @@ package chacas0.personnalcalculator;
 
 public class Man extends Someone {
     //Constructor
-    public Man(String firstName, String name, int yOld, double height, double weight) {
-        super(firstName, name, yOld, height, weight, 'M');
+    public Man(String name, int yOld, float height, float weight) {
+        super(name, yOld, height, weight, 'M');
     }
 }

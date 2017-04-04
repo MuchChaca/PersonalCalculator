@@ -6,16 +6,14 @@ package chacas0.personnalcalculator;
 
 public class Someone {
     //attributs
-    protected String firstName;
     protected String name;
     protected int yOld;
-    protected double height;
-    protected double weight;
+    protected float height;
+    protected float weight;
     protected char sexe;
 
     //construct
-    public Someone(String firstName, String name, int yOld, double height, double weight, char sexe) {
-        this.firstName = firstName;
+    public Someone(String name, int yOld, float height, float weight, char sexe) {
         this.name = name;
         this.yOld = yOld;
         this.height = height;
@@ -26,10 +24,4 @@ public class Someone {
 //    public void test(){
 //        System.out.println("ca marche");
 //    }
-
-    public float imc(){
-        float imc=0;
-
-        return imc;
-    }
 }

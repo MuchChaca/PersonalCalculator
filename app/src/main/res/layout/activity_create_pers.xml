@@ -75,7 +75,7 @@
                 android:textStyle="bold" />
 
             <RadioGroup
-                android:id="@+id/creap_rad_age"
+                android:id="@+id/creap_rad_sexe_rb"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -203,7 +203,7 @@
                 android:textStyle="italic" />
 
             <RadioGroup
-                android:id="@+id/creap_rad_unit"
+                android:id="@+id/creap_rad_unit_rb"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

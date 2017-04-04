@@ -5,11 +5,13 @@ package chacas0.personnalcalculator;
  */
 
 public class Globals {
+    private static Globals instance;
     private static Someone currentOne;
     private static Someone[] tabOnes;
+    private static String calculType;
 
     private Globals(){
-        //empty construct
+        //empty construct on purpose
     }
 
     // Synchronization
@@ -21,8 +23,6 @@ public class Globals {
     }
 
     ///// GETTERS & SETTERS §§ Auto generated
-    private static Globals instance;
-
     public static Someone getCurrentOne() {
         return currentOne;
     }
@@ -40,7 +40,15 @@ public class Globals {
         Globals.tabOnes[i] = newOne;
     }
 
-//    public void setTest(int t){
+    public static String getCalculType() {
+        return calculType;
+    }
+
+    public static void setCalculType(String calculType) {
+        Globals.calculType = calculType;
+    }
+
+    //    public void setTest(int t){
 //        GlobalClass.test=t;
 //    }
 //    public int getTest(){

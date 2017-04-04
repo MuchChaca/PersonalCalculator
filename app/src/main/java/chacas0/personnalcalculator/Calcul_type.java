@@ -5,14 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import chacas0.personnalcalculator.Globals;
+
+
 
 public class Calcul_type extends AppCompatActivity {
+    Globals g = Globals.getInstance(); //Global variables
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calcul_type);
 
+        /**
+         * @TODO +Add an activity to choose the one we one for the calculations after or before the actual calcul
+         */
 
 
         //=> Button to select an IMC calcul
@@ -21,6 +28,7 @@ public class Calcul_type extends AppCompatActivity {
         btn_imc.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent goingTo = new Intent(Calcul_type.this, Calcul_imc.class);
+                g.setCalculType("imc");
                 startActivity(goingTo);
             }
         });
@@ -30,6 +38,7 @@ public class Calcul_type extends AppCompatActivity {
         btn_img.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent goingTo = new Intent(Calcul_type.this, Calcul_img.class);
+                g.setCalculType("img");
                 startActivity(goingTo);
             }
         });

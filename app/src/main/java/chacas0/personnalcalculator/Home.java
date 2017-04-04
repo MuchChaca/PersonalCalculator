@@ -26,6 +26,9 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        /**
+         * @TODO +Add function raz for the currentOne var which is called each time we go back to home
+         */
 
     }
 
