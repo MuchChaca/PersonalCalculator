@@ -26,4 +26,10 @@ public class Someone {
 //    public void test(){
 //        System.out.println("ca marche");
 //    }
+
+    public float imc(){
+        float imc=0;
+
+        return imc;
+    }
 }
