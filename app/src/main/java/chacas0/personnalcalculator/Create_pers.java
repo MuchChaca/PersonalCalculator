@@ -84,14 +84,13 @@ public class Create_pers extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Aucune unité sélectionné!", Toast.LENGTH_SHORT).show();
                         return;
                     }
-
-
+                    //_ Add the object in the list
                     if(valueSexe == 'F'){
                         Woman person = new Woman(nom, valueAge, valueTaille, valuePoids);
-                        g.addOne(person);   //Add the object in the list
+                        g.addOne(person);
                     }else if(valueSexe == 'M'){
                         Man person = new Man(nom, valueAge, valueTaille, valuePoids);
-                        g.addOne(person);   //Add the object in the list
+                        g.addOne(person);
                     }else{
                         //If something bad happends HERE
                         Toast.makeText(Create_pers.this, "Erreur lors de la création de la personne; ", Toast.LENGTH_SHORT).show();

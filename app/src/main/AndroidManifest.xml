@@ -19,7 +19,8 @@
         <activity android:name=".Calcul_type" />
         <activity android:name=".Create_pers" />
         <activity android:name=".Calcul_imc" />
-        <activity android:name=".Calcul_img"></activity>
+        <activity android:name=".Calcul_img" />
+        <activity android:name=".Choice_pers"></activity>
     </application>
 
 </manifest>
