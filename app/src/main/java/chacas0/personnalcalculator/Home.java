@@ -26,6 +26,16 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        //=> Button to calculations
+        final Button btn_calc = (Button) findViewById(R.id.home_btn_calculer);
+        //_ What to do on click
+        btn_calc.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent goingTo = new Intent(Home.this, Calcul_type.class);
+                startActivity(goingTo);
+            }
+        });
+
         /**
          * @TODO +Add function raz for the currentOne var which is called each time we go back to home
          */

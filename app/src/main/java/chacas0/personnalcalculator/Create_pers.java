@@ -9,10 +9,7 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-import chacas0.personnalcalculator.Globals;
-import chacas0.personnalcalculator.Someone;
-import chacas0.personnalcalculator.Woman;
-import chacas0.personnalcalculator.Man;
+
 
 public class Create_pers extends AppCompatActivity {
     Globals g = Globals.getInstance(); //Global variables
@@ -43,6 +40,16 @@ public class Create_pers extends AppCompatActivity {
         btn_home.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent goingTo = new Intent(Create_pers.this, Home.class);
+                startActivity(goingTo);
+            }
+        });
+
+        //=> Button to start calculs
+        final Button btn_calcul = (Button) findViewById(R.id.creap_lay_calcul_btn);
+        //_ What to do on click
+        btn_calcul.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent goingTo = new Intent(Create_pers.this, Calcul_type.class);
                 startActivity(goingTo);
             }
         });
@@ -103,5 +110,7 @@ public class Create_pers extends AppCompatActivity {
             }
 
         });
+
+
     }
 }

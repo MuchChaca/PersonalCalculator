@@ -15,6 +15,11 @@ public class Globals {
     }
 
     // Synchronization
+
+    /**
+     * Function that is supposed to synchronize the global function each time
+     * @return Globals An instance of the Globals
+     */
     public static synchronized Globals getInstance(){
         if(instance==null){
             instance = new Globals();
@@ -22,11 +27,18 @@ public class Globals {
         return instance;
     }
 
-    ///// GETTERS & SETTERS §§ Auto generated
+    /**
+     * Getter function for currentOne
+     * @return Someone La personne à utiliser
+     */
     public static Someone getCurrentOne() {
         return currentOne;
     }
 
+    /**
+     * Setter function for currentOne.
+     * @param one The one we want it to be.
+     */
     public static void setCurrentOne(Someone one) {
         Globals.currentOne = one;
     }

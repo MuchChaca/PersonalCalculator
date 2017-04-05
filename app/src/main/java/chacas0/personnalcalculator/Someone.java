@@ -1,5 +1,8 @@
 package chacas0.personnalcalculator;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ChacaS0 on 12/14/16.
  */
@@ -11,6 +14,7 @@ public class Someone {
     protected float height;
     protected float weight;
     protected char sexe;
+    protected ArrayList<Calcul> calculs = new ArrayList<Calcul>();
 
     //construct
     public Someone(String name, int yOld, float height, float weight, char sexe) {
