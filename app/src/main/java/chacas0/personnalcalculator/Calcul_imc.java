@@ -130,7 +130,51 @@ public class Calcul_imc extends AppCompatActivity {
             }
         });
 
-        
+        /**
+         * If changes happens to the RadioGroup of units:
+         */
+        RadioGroup radGrp = (RadioGroup) findViewById(R.id.imc_rad_unit);
+        radGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            public void onCheckedChanged(RadioGroup group, int checkedId){
+                ((TextView) findViewById(R.id.imc_resultat_value)).setText(" _");
+                ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(" _");
+            }
+        });
+
+        /**
+         * If changes happens to the weight:
+         */
+        final EditText etPoids = (EditText) findViewById(R.id.imc_et_poids);
+        etPoids.addTextChangedListener(new TextWatcher(){
+            public void afterTextChanged(Editable s){
+                //
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after){
+                //
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count){
+//                Toast.makeText(getApplicationContext(), "Champ changé", Toast.LENGTH_SHORT).show();
+                ((TextView) findViewById(R.id.imc_resultat_value)).setText(" _");
+                ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(" _");
+            }
+        });
+
+        /**
+         * If changes happens to the height:
+         */
+        final EditText etTaille = (EditText) findViewById(R.id.imc_et_taille);
+        etTaille.addTextChangedListener(new TextWatcher(){
+            public void afterTextChanged(Editable s){
+                //
+            }
+            public void beforeTextChanged(CharSequence s, int start, int before, int after){
+                //
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count){
+                ((TextView) findViewById(R.id.imc_resultat_value)).setText(" _");
+                ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(" _");
+            }
+        });
 
     }
 
