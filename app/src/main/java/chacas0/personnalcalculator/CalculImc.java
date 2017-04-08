@@ -9,6 +9,10 @@ package chacas0.personnalcalculator;
 
 public class CalculImc extends Calcul {
 
+    /**
+     * @see Someone The param
+     * @param theOne The one we are making calculs on
+     */
     public CalculImc(Someone theOne) {
         super.Calcul(theOne);
     }

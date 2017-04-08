@@ -57,9 +57,6 @@ public class Create_pers extends AppCompatActivity {
             }
         });
 
-        /**
-         * @TOFIX Creating a person makes the activity crash.
-         */
         //Fetch the Create button
         final Button btnCrea = (Button) findViewById(R.id.creap_btn_create);
         //Add the listenner on the b_valider button
@@ -74,9 +71,7 @@ public class Create_pers extends AppCompatActivity {
                     Float valuePoids = Float.valueOf(poids);
                     Float valueTaille = Float.valueOf(taille);
                     int valueAge = Integer.parseInt(age);
-//                    Toast.makeText(getApplicationContext(), "valueAge: "+valueAge, Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(getApplicationContext(), "valueTaille: "+valueTaille, Toast.LENGTH_SHORT).show();
-//                    Toast.makeText(getApplicationContext(), "valuePoids: "+valuePoids, Toast.LENGTH_SHORT).show();
+
                     //GESTION DE L'UNITE DE MESURE!!!!//
                     if(((RadioGroup) findViewById(R.id.creap_rad_unit_rb)).getCheckedRadioButtonId() == R.id.creap_rad_unit_btn_cm){
                         //Centimètres en mètres

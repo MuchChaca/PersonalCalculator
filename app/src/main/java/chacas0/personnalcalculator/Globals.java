@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Globals {
     private static Globals instance;
-    private static Someone currentOne;
+    private static Someone currentOne = null;
     private static ArrayList<Someone> tabOnes= new ArrayList<Someone>();
     private static String calculType;
 

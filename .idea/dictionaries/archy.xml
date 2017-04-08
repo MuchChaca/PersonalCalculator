@@ -2,13 +2,24 @@
   <dictionary name="archy">
     <words>
       <w>ajoute</w>
+      <w>aucune</w>
       <w>bouton</w>
       <w>calcul</w>
       <w>calculs</w>
+      <w>centimètres</w>
+      <w>crea</w>
       <w>creap</w>
+      <w>gestion</w>
+      <w>listenner</w>
+      <w>mesure</w>
+      <w>mètres</w>
+      <w>nulle</w>
       <w>pers</w>
       <w>poids</w>
+      <w>sexe</w>
+      <w>sélectionné</w>
       <w>taille</w>
+      <w>unité</w>
       <w>valider</w>
       <w>valids</w>
     </words>

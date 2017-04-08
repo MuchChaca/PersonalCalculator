@@ -8,7 +8,7 @@ import java.util.List;
  */
 
 public class Someone {
-    //attributs
+    //attributes
     protected String name;
     protected int yOld;
     protected float height;
@@ -26,6 +26,7 @@ public class Someone {
     }
 
     ///// GETTERS & SETTERS §§ Auto generated  \\\\\\\
+
     public String getName() {
         return name;
     }
@@ -66,8 +67,12 @@ public class Someone {
         this.sexe = sexe;
     }
 
+    public ArrayList<Calcul> getCalculs() {
+        return calculs;
+    }
 
-//    public void test(){
-//        System.out.println("ca marche");
-//    }
+    public void addCalculs(Calcul calc) {
+        this.calculs.add(calc);
+    }
+
 }
