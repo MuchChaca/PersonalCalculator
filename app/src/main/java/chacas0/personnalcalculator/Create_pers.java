@@ -57,6 +57,9 @@ public class Create_pers extends AppCompatActivity {
             }
         });
 
+        /**
+         * @TOFIX Creating a person makes the activity crash.
+         */
         //Fetch the Create button
         final Button btnCrea = (Button) findViewById(R.id.creap_btn_create);
         //Add the listenner on the b_valider button
@@ -67,11 +70,13 @@ public class Create_pers extends AppCompatActivity {
                 String poids = ((EditText) findViewById(R.id.creap_lay_weight_et_value)).getText().toString();
                 String taille = ((EditText) findViewById(R.id.creap_lay_height_et_value)).getText().toString();
                 String age = ((EditText) findViewById(R.id.creap_lay_age_et_value)).getText().toString();
-//                try{            //error management
+                try{            //error management
                     Float valuePoids = Float.valueOf(poids);
                     Float valueTaille = Float.valueOf(taille);
                     int valueAge = Integer.parseInt(age);
-
+//                    Toast.makeText(getApplicationContext(), "valueAge: "+valueAge, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "valueTaille: "+valueTaille, Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(), "valuePoids: "+valuePoids, Toast.LENGTH_SHORT).show();
                     //GESTION DE L'UNITE DE MESURE!!!!//
                     if(((RadioGroup) findViewById(R.id.creap_rad_unit_rb)).getCheckedRadioButtonId() == R.id.creap_rad_unit_btn_cm){
                         //Centimètres en mètres
@@ -98,17 +103,22 @@ public class Create_pers extends AppCompatActivity {
                     if(valueSexe == 'F'){
                         Woman person = new Woman(nom, valueAge, valueTaille, valuePoids);
                         g.addOne(person);
+                        g.setCurrentOne(person);
                     }else if(valueSexe == 'M'){
                         Man person = new Man(nom, valueAge, valueTaille, valuePoids);
                         g.addOne(person);
+                        g.setCurrentOne(person);
                     }else{
                         //If something bad happends HERE
                         Toast.makeText(Create_pers.this, "Erreur lors de la création de la personne; ", Toast.LENGTH_SHORT).show();
                     }
-//                }catch(Exception e){
-//                    //Si une erreur se produit dans le code précédent
-//                    Toast.makeText(Create_pers.this, "Erreur de saisie de poids ou de taille ", Toast.LENGTH_SHORT).show();
-//                }
+                    Toast.makeText(getApplicationContext(), g.getCurrentOne().getName()+" a été créé avec succès\n" +
+                            "Cliquez sur calcul pour continuer !", Toast.LENGTH_SHORT).show();
+                }catch(Exception e){
+                    //Si une erreur se produit dans le code précédent
+                    Toast.makeText(Create_pers.this, "Erreur de saisie de poids ou de taille: "+e, Toast.LENGTH_SHORT).show();
+
+                }
 
             }
 

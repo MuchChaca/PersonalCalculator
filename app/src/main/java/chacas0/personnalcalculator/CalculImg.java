@@ -5,4 +5,7 @@ package chacas0.personnalcalculator;
  */
 
 public class CalculImg extends CalculImc {
+    public CalculImg(Someone theOne) {
+        super(theOne);
+    }
 }

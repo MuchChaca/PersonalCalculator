@@ -1,5 +1,7 @@
 package chacas0.personnalcalculator;
 
+import java.util.ArrayList;
+
 /**
  * Created by archy on 4/4/17.
  */
@@ -7,7 +9,7 @@ package chacas0.personnalcalculator;
 public class Globals {
     private static Globals instance;
     private static Someone currentOne;
-    private static Someone[] tabOnes;
+    private static ArrayList<Someone> tabOnes= new ArrayList<Someone>();
     private static String calculType;
 
     private Globals(){
@@ -43,13 +45,14 @@ public class Globals {
         Globals.currentOne = one;
     }
 
-    public static Someone[] getTabOnes() {
-        return tabOnes;
+    public static ArrayList<Someone> getTabOnes() {
+        return Globals.tabOnes;
     }
 
     public static void addOne(Someone newOne) {
-        int i = Globals.tabOnes.length;
-        Globals.tabOnes[i] = newOne;
+//        int i = Globals.tabOnes.length-1;
+//        Globals.tabOnes[i] = newOne;
+        Globals.tabOnes.add(newOne);
     }
 
     /**
