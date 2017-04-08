@@ -1,32 +1,24 @@
 package chacas0.personnalcalculator;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
-
-
 
 
 public class Calcul_imc extends AppCompatActivity {
     Globals g = Globals.getInstance(); //Global variables
 
-
-    /**
-     * @TODO Needs adjusments; LOTS
-     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calcul);
+        setContentView(R.layout.activity_calcul_imc);
+
+        /**
+         * @TODO [1]+Implement the test of the CalculImc Here
+         */
+
+        /**
+         * @NOTE IMC = poids / taille²
+         */
 
 
 //        //Fetch the creap_btn_raz button

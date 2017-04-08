@@ -1,7 +1,7 @@
 package chacas0.personnalcalculator;
 
 
-import android.widget.TextView;
+
 
 /**
  * Created by archy on 4/5/17.
@@ -9,17 +9,21 @@ import android.widget.TextView;
 
 public class CalculImc extends Calcul {
 
-    public CalculImc(Someone theOne) {
+    public void CalculImc(Someone theOne) {
         super.Calcul(theOne);
     }
 
+    /**
+     * Calcul the imc of the person with the parameters provided when the person was created
+     * @return String The comment made from the result of the IMC
+     */
     public String calcul_imc() {
         //LE CALCUL
         float valuePoids = theOne.getWeight();
         float valueTaille = theOne.getHeight();
         this.result = valuePoids / (valueTaille * valueTaille);
 //        ((TextView) findViewById(R.id.tv_result_calc)).setText(result.toString());
-        //LE COMMENTAIRE
+        //THE COMMENT
         String com = "";
         if (result < 16) {
             com = "Vas au McDo 3 fois par jour!";

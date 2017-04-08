@@ -25,8 +25,7 @@ public class Someone {
         this.sexe = sexe;
     }
 
-    ///// GETTERS & SETTERS §§ Auto generated
-
+    ///// GETTERS & SETTERS §§ Auto generated  \\\\\\\
     public String getName() {
         return name;
     }

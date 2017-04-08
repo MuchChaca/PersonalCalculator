@@ -4,37 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="chacas0.personnalcalculator.Calcul_img">
+    tools:context="chacas0.personnalcalculator.Calcul_imc">
 
     <LinearLayout
-        android:id="@+id/calc_img_main_lay"
+        android:id="@+id/calc_imc_main_lay"
         android:layout_width="368dp"
-        android:layout_height="wrap_content"
+        android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <TextView
-            android:id="@+id/calc_img_title"
+            android:id="@+id/calc_imc_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Calcul IMG"
+            android:text="Calcul IMC"
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="30sp"
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/img_lay_taille"
+            android:id="@+id/imc_lay_taille"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/img_tv_taille"
+                android:id="@+id/imc_tv_taille"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Taille : "
@@ -43,7 +41,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/img_et_taille"
+                android:id="@+id/imc_et_taille"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -53,15 +51,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/img_lay_unit"
+            android:id="@+id/imc_lay_unit"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/img_unit_tv"
+                android:id="@+id/imc_unit_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -71,13 +68,13 @@
                 android:textStyle="bold|italic" />
 
             <RadioGroup
-                android:id="@+id/img_rad_unit"
+                android:id="@+id/imc_rad_unit"
                 android:layout_width="303dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/img_unit_btn_cm"
+                    android:id="@+id/imc_unit_btn_cm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -87,7 +84,7 @@
                     android:textStyle="italic" />
 
                 <RadioButton
-                    android:id="@+id/img_unit_btn_m"
+                    android:id="@+id/imc_unit_btn_m"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -100,15 +97,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/img_lay_poids"
+            android:id="@+id/imc_lay_poids"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/img_tv_poids"
+                android:id="@+id/imc_tv_poids"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -118,7 +114,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/img_et_poids"
+                android:id="@+id/imc_et_poids"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -129,27 +125,95 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/img_lay_resultats"
+            android:id="@+id/imc_lay_resultats"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/img_resultat_title"
+                android:id="@+id/imc_resultat_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.14"
                 android:text="Résultat : "
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/img_resultat_value"
+                android:id="@+id/imc_resultat_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="_" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imc_lay_comm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/imc_comm_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Commentaire : "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imc_comm_tv_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" _ "
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imc_lay_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/imc_menu_raz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="R.A.Z."
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/imc_menu_valid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="VALIDER"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/imc_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="ACCUEIL"
+            android:textColor="@android:color/background_light"
+            android:textSize="30sp"
+            android:textStyle="bold" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
