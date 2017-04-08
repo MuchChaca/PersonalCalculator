@@ -2,6 +2,10 @@ package chacas0.personnalcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 
 public class Calcul_imc extends AppCompatActivity {
@@ -19,6 +23,40 @@ public class Calcul_imc extends AppCompatActivity {
         /**
          * @NOTE IMC = poids / taille²
          */
+
+        if (g.currentOneExists()){
+            //*-> Form already filled
+            final Someone one = g.getCurrentOne();
+
+            //We add the height to the form
+            Float aTaille = one.getHeight();
+            String oneTaille = Float.toString(aTaille);
+            ((TextView) findViewById(R.id.imc_et_taille)).setText(oneTaille);
+
+            //We check the right unit
+            ((RadioButton) findViewById(R.id.imc_unit_btn_m)).setChecked(true);
+            ((RadioButton) findViewById(R.id.imc_unit_btn_cm)).setChecked(false);
+
+            //We add the weight to the form
+            Float aPoids = one.getWeight();
+            String onePoids = Float.toString(aPoids);
+            ((TextView) findViewById(R.id.imc_et_poids)).setText(onePoids);
+
+            //When the user valids the form to calculs
+            final Button btnCalc = (Button) findViewById(R.id.imc_menu_valid);
+            //on ajoute un listener sur le click du bouton b_valider
+            btnCalc.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    CalculImc calc_imc = new CalculImc(one);
+                    String imc[] = calc_imc.calcul_imc(); //*-> Here we get the imc + the comment
+
+                    ((TextView) findViewById(R.id.imc_resultat_value)).setText(imc[0]);
+                    ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(imc[1]);
+                }
+            });
+        }else{
+            //*-> Empty form
+        }
 
 
 //        //Fetch the creap_btn_raz button

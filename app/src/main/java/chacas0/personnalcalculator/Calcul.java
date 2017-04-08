@@ -19,19 +19,9 @@ public abstract class Calcul {
     }
 
 
-    public abstract String calcul_imc();
+    public abstract String[] calcul_imc();
 
-    /**
-     * Check if the current person exists
-     * @return boolean The current one.
-     */
-    public boolean currentOneExists(){
-        if(g.getCurrentOne() != null){
-            return true;
-        }else{
-            return false;
-        }
-    }
+
 
     //////////  - GETTER & SETTERS -  \\\\\\\\\\\
     public Someone getTheOne() {

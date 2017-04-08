@@ -9,19 +9,22 @@ package chacas0.personnalcalculator;
 
 public class CalculImc extends Calcul {
 
-    public void CalculImc(Someone theOne) {
+    public CalculImc(Someone theOne) {
         super.Calcul(theOne);
     }
 
     /**
      * Calcul the imc of the person with the parameters provided when the person was created
-     * @return String The comment made from the result of the IMC
+     * @return String[] String[0]=imc | String[1]=com The imc first, then the comment
      */
-    public String calcul_imc() {
+    public String[] calcul_imc() {
         //LE CALCUL
+        String toReturn[] = new String[2];
         float valuePoids = theOne.getWeight();
         float valueTaille = theOne.getHeight();
         this.result = valuePoids / (valueTaille * valueTaille);
+        String imc = Float.toString(this.result);
+        toReturn[0]= imc;
 //        ((TextView) findViewById(R.id.tv_result_calc)).setText(result.toString());
         //THE COMMENT
         String com = "";
@@ -42,6 +45,7 @@ public class CalculImc extends Calcul {
 
             //((TextView) findViewById(R.id.tv_com)).setText(com);
         }
-        return com;
+        toReturn[1] = com;
+        return toReturn;
     }
 }

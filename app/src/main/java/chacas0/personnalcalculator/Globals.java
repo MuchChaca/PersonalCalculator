@@ -52,6 +52,18 @@ public class Globals {
         Globals.tabOnes[i] = newOne;
     }
 
+    /**
+     * Check if the current person exists
+     * @return boolean The current one.
+     */
+    public boolean currentOneExists(){
+        if(getCurrentOne() != null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public static String getCalculType() {
         return calculType;
     }
