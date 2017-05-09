@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="chacas0.personnalcalculator.Choice_pers">
+    tools:context="chacas0.personalcalculator.Choice_pers">
 
     <TextView
         android:id="@+id/choice_tv_title"

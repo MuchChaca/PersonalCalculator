@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="chacas0.personnalcalculator.Calcul_img">
+    tools:context="chacas0.personalcalculator.Calcul_img">
 
     <LinearLayout
         android:id="@+id/calc_img_main_lay"

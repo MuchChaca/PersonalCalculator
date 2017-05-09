@@ -1,4 +1,4 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

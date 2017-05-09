@@ -1,7 +1,7 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 
-
+import android.widget.EditText;
 
 /**
  * Created by archy on 4/5/17.
@@ -23,6 +23,7 @@ public class CalculImc extends Calcul {
      */
     public String[] calcul_imc() {
         //LE CALCUL
+
         String toReturn[] = new String[2];
         float valuePoids = theOne.getWeight();
         float valueTaille = theOne.getHeight();

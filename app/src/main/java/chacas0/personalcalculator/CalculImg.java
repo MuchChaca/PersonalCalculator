@@ -1,4 +1,4 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 /**
  * Created by archy on 4/5/17.

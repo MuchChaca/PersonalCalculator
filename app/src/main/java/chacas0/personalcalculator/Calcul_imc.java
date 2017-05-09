@@ -1,4 +1,4 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,7 +58,7 @@ public class Calcul_imc extends AppCompatActivity {
                     ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(imc[1]);
                 }
             });
-        }else{
+        }
             //*-> Empty form
 //            Toast.makeText(getApplicationContext(), "passe ds le else", Toast.LENGTH_SHORT).show();
             //on récupère le bouton b_valider
@@ -111,7 +111,7 @@ public class Calcul_imc extends AppCompatActivity {
                     }
                 }
             });
-        }
+
         /**
          * Allowing the reset of the form
          */

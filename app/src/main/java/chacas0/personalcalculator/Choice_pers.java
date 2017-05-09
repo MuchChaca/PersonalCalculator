@@ -1,14 +1,7 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import chacas0.personnalcalculator.Globals;
-import chacas0.personnalcalculator.Someone;
-
 
 
 public class Choice_pers extends AppCompatActivity {

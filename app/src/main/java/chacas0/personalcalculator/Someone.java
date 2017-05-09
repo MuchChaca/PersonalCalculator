@@ -1,7 +1,6 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by ChacaS0 on 12/14/16.

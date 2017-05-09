@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="chacas0.personnalcalculator.Calcul_type">
+    tools:context="chacas0.personalcalculator.Calcul_type">
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,13 +32,6 @@
             android:id="@+id/btn_imc"
             android:textSize="24sp"
             android:layout_marginTop="20dp" />
-
-        <Button
-            android:text="IMG"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_img"
-            android:textSize="24sp" />
 
     </LinearLayout>
 </RelativeLayout>

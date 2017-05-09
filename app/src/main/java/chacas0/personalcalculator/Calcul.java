@@ -1,9 +1,4 @@
-package chacas0.personnalcalculator;
-
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.EditText;
-import android.widget.TextView;
+package chacas0.personalcalculator;
 
 /**
  * Created by archy on 4/5/17.

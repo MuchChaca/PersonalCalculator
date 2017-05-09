@@ -1,4 +1,4 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import java.util.ArrayList;
 

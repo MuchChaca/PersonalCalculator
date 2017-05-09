@@ -1,4 +1,4 @@
-package chacas0.personnalcalculator;
+package chacas0.personalcalculator;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -30,15 +30,15 @@ public class Calcul_type extends AppCompatActivity {
                 startActivity(goingTo);
             }
         });
-        //=> Button to select an IMG calcul
-        final Button btn_img = (Button) findViewById(R.id.btn_img);
-        //_ What to do on click
-        btn_img.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent goingTo = new Intent(Calcul_type.this, Calcul_img.class);
-                g.setCalculType("img");
-                startActivity(goingTo);
-            }
-        });
+//        //=> Button to select an IMG calcul
+//        final Button btn_img = (Button) findViewById(R.id.btn_img);
+//        //_ What to do on click
+//        btn_img.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v){
+//                Intent goingTo = new Intent(Calcul_type.this, Calcul_img.class);
+//                g.setCalculType("img");
+//                startActivity(goingTo);
+//            }
+//        });
     }
 }
