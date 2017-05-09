@@ -1,5 +1,6 @@
 package chacas0.personalcalculator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -89,19 +90,21 @@ public class Calcul_imc extends AppCompatActivity {
                         //THE COMMENT
                         String com = "";
                         if (result < 16) {
-                            com = "Vas au McDo 3 fois par jour!";
+                            com = "Manger beaucoup plus!";
                         } else if (result < 18.5) {
-                            com = "Mange un kebab 2 fois par jour!";
+                            com = "Mangez plus!";
                         } else if (result < 25) {
-                            com = "Sale normal!";
+                            com = "IMC normal.";
                         } else if (result < 30) {
-                            com = "Vive le régime!";
+                            com = "Léger surpoids!";
                         } else if (result < 35) {
                             com = "Régime + Sport recommandés";
                         } else if (result < 40) {
-                            com = "Gros régime + Plein de sport violents... :(";
+                            com = "Surpoids inquiétant!";
                         } else {
-                            com = "R.I.P. Fallait m'écouter. ;D";
+                            com = "Consultez un médecin!";
+
+                            //((TextView) findViewById(R.id.tv_com)).setText(com);
                         }
                         ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(com);
                     } catch (Exception e) {
@@ -140,6 +143,19 @@ public class Calcul_imc extends AppCompatActivity {
                 ((TextView) findViewById(R.id.imc_comm_tv_value)).setText(" _");
             }
         });
+
+
+        //=> Button to go home
+        final Button imc_home = (Button) findViewById(R.id.imc_home);
+        //_ What to do on click
+        imc_home.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Intent goingTo = new Intent(Calcul_imc.this, Home.class);
+                g.setCalculType("imc");
+                startActivity(goingTo);
+            }
+        });
+
 
         /**
          * If changes happens to the weight:

@@ -34,19 +34,19 @@ public class CalculImc extends Calcul {
         //THE COMMENT
         String com = "";
         if (result < 16) {
-            com = "Vas au McDo 3 fois par jour!";
+            com = "Manger beaucoup plus!";
         } else if (result < 18.5) {
-            com = "Mange un kebab 2 fois par jour!";
+            com = "Mangez plus!";
         } else if (result < 25) {
-            com = "Sale normal!";
+            com = "IMC normal.";
         } else if (result < 30) {
-            com = "Vive le régime!";
+            com = "Léger surpoids!";
         } else if (result < 35) {
             com = "Régime + Sport recommandés";
         } else if (result < 40) {
-            com = "Gros régime + Plein de sport violents... ou le suicide :(";
+            com = "Surpoids inquiétant!";
         } else {
-            com = "R.I.P. Fallait m'écouter. ;D";
+            com = "Consultez un médecin!";
 
             //((TextView) findViewById(R.id.tv_com)).setText(com);
         }
