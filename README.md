@@ -9,7 +9,7 @@
 (https://en.wikipedia.org/wiki/Body_mass_index);  
 *Note: The Application is suppose to be easily upgradable.*   
 
-[==> Development Status :::: ACTIVE ::::   
+[==> Development Status :::: DEAD ::::   
 
 /!\ Contribution : None  
 
